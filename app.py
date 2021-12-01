@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route('/')
 def get_count_of_user_visits_by_cookie():  # т.к. не сбрасываются по дефолту
-    visited = 0
+    visited = 0                            # +все на стороне пользователя
     usern = request.cookies.get('username')
     if request.cookies.get('visited'):
         try:
